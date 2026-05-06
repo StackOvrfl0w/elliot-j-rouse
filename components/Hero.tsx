@@ -45,9 +45,11 @@ export function Hero() {
       ref={heroRef}
       className="relative flex min-h-screen overflow-hidden bg-ink pt-24 text-paper"
     >
+      {/* TODO: Replace with ImageKit video URL before deployment */}
+      {/* ImageKit URL goes here: https://ik.imagekit.io/YOUR_ID/your-video.mp4 */}
       <video
         className="absolute inset-0 size-full object-cover"
-        src="/media/hero-icorr-video.mp4"
+        src="https://ik.imagekit.io/asadtanvir/hero-icorr-video.mp4"
         poster="/media/lab-panorama.jpeg"
         autoPlay
         muted
@@ -96,7 +98,7 @@ export function Hero() {
 
           <div data-hero-reveal className="mt-9 flex flex-wrap gap-3">
             <a
-              href="#work"
+              href="#research"
               className="inline-flex items-center gap-2 bg-primary px-5 py-3 text-sm font-black uppercase text-ink transition hover:bg-paper"
             >
               Explore work

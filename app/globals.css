@@ -1,22 +1,48 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #439CB5;
-  --color-ink: #05080A;
-  --color-panel: #0D1417;
-  --color-paper: #F3F7F8;
-  --color-soft: #DCE8EB;
-  --color-copper: #C86B4F;
+  --color-primary: #439cb5;
+  --color-ink: #05080a;
+  --color-panel: #0d1417;
+  --color-paper: #f3f7f8;
+  --color-soft: #dce8eb;
+  --color-copper: #c86b4f;
   --font-sans: Arial, Helvetica, sans-serif;
 }
 
 :root {
-  --primary: #439CB5;
-  --ink: #05080A;
-  --panel: #0D1417;
-  --paper: #F3F7F8;
-  --soft: #DCE8EB;
-  --copper: #C86B4F;
+  --primary: #439cb5;
+  --ink: #05080a;
+  --panel: #0d1417;
+  --paper: #f3f7f8;
+  --soft: #dce8eb;
+  --copper: #c86b4f;
+  --color-warm-bg: #1a1612;
+  --color-warm-panel: #231f1a;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-copper);
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-primary) transparent;
 }
 
 * {
