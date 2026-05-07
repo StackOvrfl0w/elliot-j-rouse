@@ -116,7 +116,7 @@ export function ContactSection() {
         </div>
 
         <div className="mt-16 flex flex-wrap items-center justify-between gap-8 border-t border-paper/10 pt-8">
-          <div className="flex gap-8">
+          <div className="flex flex-col gap-3 sm:flex-row sm:gap-8">
             {links.map((link) => (
               <a
                 key={link.label}

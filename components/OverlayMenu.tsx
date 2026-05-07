@@ -84,7 +84,9 @@ export function OverlayMenu({ navItems }: OverlayMenuProps) {
     window.setTimeout(
       () => {
         const section = document.querySelector(href);
-        section?.scrollIntoView({ behavior: reducedMotion ? "auto" : "smooth" });
+        section?.scrollIntoView({
+          behavior: reducedMotion ? "auto" : "smooth",
+        });
       },
       reducedMotion ? 0 : 320,
     );
@@ -99,7 +101,9 @@ export function OverlayMenu({ navItems }: OverlayMenuProps) {
             className="flex items-center gap-3 text-sm font-bold uppercase tracking-normal text-paper"
             aria-label="Elliott Rouse home"
           >
-            <span className="flex size-9 items-center justify-center bg-primary text-ink">EJ</span>
+            <span className="flex size-9 items-center justify-center bg-primary text-ink">
+              EJ
+            </span>
             <span className="hidden sm:inline">Neurobionics Portfolio</span>
           </a>
 
@@ -134,22 +138,29 @@ export function OverlayMenu({ navItems }: OverlayMenuProps) {
         <div className="noise-layer" />
         <div
           ref={panelRef}
-          className="section-shell relative grid min-h-screen content-center gap-10 py-8 opacity-0 lg:grid-cols-[0.8fr_1.2fr]"
+          className="section-shell relative grid min-h-screen items-start gap-10 py-8 opacity-0 overflow-hidden lg:grid-cols-[0.8fr_1.2fr]"
         >
           <div className="hidden border border-white/10 bg-panel/80 p-6 lg:block">
-            <p className="text-sm font-bold uppercase text-primary">Featured profile</p>
+            <p className="text-sm font-bold uppercase text-primary">
+              Featured profile
+            </p>
             <h2 className="mt-8 text-5xl font-black uppercase leading-none text-paper">
               Elliott J.
               <br />
               Rouse
             </h2>
             <p className="mt-6 max-w-md text-base leading-7 text-soft/80">
-              Associate Professor of Robotics and Mechanical Engineering, director of a lab
-              advancing wearable robotics through neuroscience, biomechanics, and control.
+              Associate Professor of Robotics and Mechanical Engineering,
+              director of a lab advancing wearable robotics through
+              neuroscience, biomechanics, and control.
             </p>
             <div className="mt-10 grid grid-cols-2 gap-3 text-sm text-soft/75">
-              <span className="border border-white/10 p-4">University of Michigan</span>
-              <span className="border border-white/10 p-4">Neurobionics Lab</span>
+              <span className="border border-white/10 p-4">
+                University of Michigan
+              </span>
+              <span className="border border-white/10 p-4">
+                Neurobionics Lab
+              </span>
             </div>
           </div>
 
@@ -168,13 +179,13 @@ export function OverlayMenu({ navItems }: OverlayMenuProps) {
             </div>
 
             <nav aria-label="Primary">
-              <ul className="space-y-1">
+              <ul className="space-y-1 overflow-y-auto max-h-[calc(100vh-160px)] overscroll-contain pr-2">
                 {navItems.map((item) => (
                   <li key={item.href} data-menu-link>
                     <button
                       type="button"
                       onClick={() => goToSection(item.href)}
-                      className="group flex w-full items-center justify-between border-b border-white/10 py-3 text-left text-5xl font-black leading-none text-paper transition hover:text-primary md:text-7xl lg:text-8xl"
+                      className="group flex w-full items-center justify-between border-b border-white/10 py-3 text-left text-4xl font-black leading-none text-paper transition hover:text-primary md:text-5xl lg:text-6xl"
                     >
                       <span>{item.label}</span>
                       <ArrowUpRight
