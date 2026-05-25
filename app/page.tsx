@@ -1,20 +1,20 @@
 import Image from "next/image";
 import { AboutSection } from "@/components/AboutSection";
-import { ContactSection } from "@/components/ContactSection";
+// import { ContactSection } from "@/components/ContactSection";
 import { Hero } from "@/components/Hero";
 import { HonorsTimeline } from "@/components/HonorsTimeline";
-import { OverlayMenu } from "@/components/OverlayMenu";
+// import { OverlayMenu } from "@/components/OverlayMenu";
 import { ProjectCard } from "@/components/ProjectCard";
-import { PublicationCard } from "@/components/PublicationCard";
+// import { PublicationCard } from "@/components/PublicationCard";
 import { Reveal } from "@/components/Reveal";
 import { SectionHeader } from "@/components/SectionHeader";
 import {
   expertise,
   honors,
-  navItems,
+  // navItems,
   podcastEpisodes,
   projects,
-  publications,
+  // publications,
 } from "@/content/portfolio";
 
 export default function Home() {
@@ -35,7 +35,7 @@ export default function Home() {
 
   return (
     <>
-      <OverlayMenu navItems={navItems} />
+      {/* <OverlayMenu navItems={navItems} /> */}
       <main>
         <Hero />
 
@@ -143,10 +143,10 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="family" className="bg-[#1a1612]">
+        {/* <section id="family" className="bg-[#1a1612]">
           <div className="section-shell grid min-h-[80vh] grid-cols-1 items-end gap-16 py-24 lg:grid-cols-2">
             <div className="relative h-[600px]">
-              {/* TODO: Replace all src values with ImageKit URLs when ready */}
+              TODO: Replace all src values with ImageKit URLs when ready
               <Image
                 src="/media/rouse-family.jpg"
                 alt="Rouse family"
@@ -203,7 +203,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         <div className="h-24 bg-gradient-to-b from-warm-bg to-ink" />
 
@@ -244,7 +244,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="publications" className="bg-panel py-24 md:py-32">
+        {/* <section id="publications" className="bg-panel py-24 md:py-32">
           <div className="section-shell grid gap-12 lg:grid-cols-[0.42fr_0.58fr]">
             <Reveal>
               <div className="sticky top-28">
@@ -269,7 +269,7 @@ export default function Home() {
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
 
         <section id="honors" className="bg-ink py-24 md:py-32">
           <div className="section-shell">
@@ -324,7 +324,7 @@ export default function Home() {
           </div>
         </section>
 
-        <ContactSection />
+        {/* <ContactSection /> */}
       </main>
     </>
   );

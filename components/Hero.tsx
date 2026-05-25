@@ -1,7 +1,8 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useRef } from "react";
-import { ArrowDown, ArrowUpRight } from "lucide-react";
+// import { ArrowDown, ArrowUpRight } from "lucide-react";
 import gsap from "gsap";
 import { heroLabels } from "@/content/portfolio";
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
@@ -43,7 +44,7 @@ export function Hero() {
     <section
       id="top"
       ref={heroRef}
-      className="relative flex min-h-screen overflow-hidden bg-ink pt-24 text-paper"
+      className="relative flex min-h-screen overflow-hidden bg-ink text-paper"
     >
       {/* TODO: Replace with ImageKit video URL before deployment */}
       {/* ImageKit URL goes here: https://ik.imagekit.io/YOUR_ID/your-video.mp4 */}
@@ -62,7 +63,7 @@ export function Hero() {
       <div className="absolute inset-0 bg-primary/20 mix-blend-color" />
       <div className="noise-layer" />
 
-      <div className="section-shell relative z-10 flex min-h-[calc(100vh-6rem)] flex-col justify-between py-8 md:py-10">
+      <div className="section-shell relative z-10 flex min-h-screen flex-col justify-between py-6 md:py-8">
         <div
           data-hero-reveal
           className="flex flex-wrap items-center justify-between gap-4 text-xs font-bold uppercase text-soft md:text-sm"
@@ -73,7 +74,23 @@ export function Hero() {
           </span>
         </div>
 
-        <div className="py-14 md:py-16">
+        <div
+          data-hero-reveal
+          className="pointer-events-none absolute right-2 top-[18%] hidden w-52 md:right-8 lg:block xl:right-16 xl:w-72"
+        >
+          <div className="relative aspect-[3/4]">
+            <Image
+              src="/media/osl-orbit-transparent.webp"
+              alt="Open-source leg orbit animation"
+              fill
+              unoptimized
+              sizes="(min-width: 1280px) 288px, 208px"
+              className="object-contain object-center drop-shadow-2xl"
+            />
+          </div>
+        </div>
+
+        <div className="py-8 md:py-10">
           <p
             data-hero-reveal
             className="mb-5 text-base font-black uppercase text-primary md:text-2xl"
@@ -82,7 +99,7 @@ export function Hero() {
           </p>
           <h1
             ref={titleRef}
-            className="max-w-6xl text-6xl font-black uppercase leading-[0.9] tracking-normal text-paper md:text-8xl lg:text-[9rem] xl:text-[11rem]"
+            className="max-w-6xl text-6xl font-black uppercase leading-[0.9] tracking-normal text-paper md:text-8xl lg:text-[8.5rem] xl:text-[9.5rem]"
           >
             Elliott
             <br />
@@ -96,7 +113,7 @@ export function Hero() {
             the nervous system controls human movement.
           </p>
 
-          <div data-hero-reveal className="mt-9 flex flex-wrap gap-3">
+          {/* <div data-hero-reveal className="mt-9 flex flex-wrap gap-3">
             <a
               href="#research"
               className="inline-flex items-center gap-2 bg-primary px-5 py-3 text-sm font-black uppercase text-ink transition hover:bg-paper"
@@ -111,7 +128,7 @@ export function Hero() {
               Connect
               <ArrowUpRight aria-hidden="true" size={16} />
             </a>
-          </div>
+          </div> */}
         </div>
 
         <div className="grid gap-3 md:grid-cols-3">

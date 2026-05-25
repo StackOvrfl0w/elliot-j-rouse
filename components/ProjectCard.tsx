@@ -10,6 +10,7 @@ type ProjectCardProps = {
 export function ProjectCard({ project, index }: ProjectCardProps) {
   const priority = index < 2;
   const isGif = project.image.endsWith(".gif");
+  const cropToLegs = project.title === "Variable Stiffness Prosthetic Ankle";
 
   return (
     <article className="group overflow-hidden border border-white/10 bg-panel primary-ring">
@@ -22,7 +23,9 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
             priority={priority}
             unoptimized={isGif}
             sizes="(min-width: 1024px) 50vw, 100vw"
-            className="object-cover transition duration-700 group-hover:scale-105"
+            className={`object-cover transition duration-700 group-hover:scale-105 ${
+              cropToLegs ? "object-bottom" : "object-center"
+            }`}
           />
           <div className="absolute left-3 top-3 bg-ink/80 px-3 py-2 text-xs font-black uppercase text-primary">
             {project.category}
